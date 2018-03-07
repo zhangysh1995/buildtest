@@ -12,6 +12,11 @@ RUN apt-get update
 RUN apt-get install -y vim python git wget sudo
 RUN apt-get install -y cmake automake scons
 
+# dependency management tools
+RUN apt install -y auto-apt apt-file
+RUN auto-apt update && appt-file update
+RUN auto-apt updatedb && auto-apt update-local
+
 # user management
 RUN useradd -s /bin/bash test
 RUN usermod -aG sudo test
