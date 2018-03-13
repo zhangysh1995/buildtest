@@ -14,7 +14,7 @@ RUN apt-get install -y cmake automake scons
 
 # dependency management tools
 RUN apt install -y auto-apt apt-file
-RUN auto-apt update && appt-file update
+RUN auto-apt update && apt-file update
 RUN auto-apt updatedb && auto-apt update-local
 
 # user management
