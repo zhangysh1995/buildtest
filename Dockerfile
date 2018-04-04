@@ -10,7 +10,7 @@ MAINTAINER Yushan Zhang <zhangysh1995@gmail.com>
 # software management
 RUN apt-get update
 RUN apt-get install -y vim python3 python3-pip git wget sudo
-RUN apt-get install -y cmake automake scons
+RUN apt-get install -y build-essential gcc g++ cmake automake scons
 
 # dependency management tools
 RUN apt install -y auto-apt apt-file
